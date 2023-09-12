@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cheesy Carbonara</title>
 
+    <script
+      src="https://kit.fontawesome.com/29b198df20.js"
+      crossorigin="anonymous"
+    ></script>
+
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
       *::before {
         margin: 0;
         padding: 0;
@@ -13,33 +20,76 @@
       }
 
       body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background-color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        margin: 0 auto;
+        background-color: #b69f61;
         color: #2d2f31;
         height: 100vh;
       }
 
-      .main-container {
+      img {
+        height: 100%;
+        width: 40%;
+        border-radius: 100%;
+      }
+
+      li {
+        margin-bottom: 1rem;
+      }
+      .container {
+        /* height: 100vh; */
+        width: 43rem;
+        padding: 2rem 3.2rem;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        max-width: 50rem;
-        margin: 0 auto;
-        padding: 1.25rem 1.25rem;
+        background-color: #fefefe;
+        border-radius: 5%;
       }
 
-      /* .img-container {
-        max-width: 85%;
-        height: 50%;
-        margin-bottom: 1.25rem;
-      } */
+      .horizontal-spacing {
+        margin: 1rem auto;
+        border: 0.1rem solid #b69f61;
+        width: 95%;
+      }
+
+      .vertical-spacing {
+        width: 0.1rem;
+        background-color: #b69f61;
+        height: 80%;
+        align-self: center; /*Vertically centers my spacer */
+      }
+
+      .mar-spacing {
+        margin-top: 3.2rem;
+      }
+
+      .grid-container {
+        border-radius: 10%;
+        padding: 0 1rem;
+        background-color: #f8f8f8;
+        box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+      }
+
+      .grid {
+        position: relative;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 0.1rem 3fr;
+        column-gap: 3.2rem;
+      }
+
+      .grid section:first-child ul {
+        margin-top: 9rem;
+      }
     </style>
   </head>
   <body>
-    <div class="main-container">
+    <div class="container">
       <header>
         <h1>Cheesy Bacon Carbonara</h1>
         <div class="img-container">
@@ -50,38 +100,75 @@
       <section>
         <h2>Description</h2>
         <p>
-          Your dish description goes here. This dish is a delightful blend of
-          flavors and textures, perfect for a hearty meal with family and
-          friends. The unique combination of ingredients creates a rich and
-          savory dish that is sure to please everyone at your table.
+          This creamy bacon carbonara recipe is so simple to make and so
+          rewarding. It is yet another absolute classic Italian recipe that
+          everyone should be able to make themselves at home.
         </p>
-        <p>
-          You can add a little more information about the dish in this
-          paragraph. Talk about the origin of the recipe, or some tips to get
-          the best results. You can even mention the estimated preparation time
-          and difficulty level here.
-        </p>
+
+        <i class="fa-regular fa-clock fa-2xl" style="color: #b69f61"></i>
       </section>
 
-      <section>
-        <h2>Ingredients</h2>
-        <ul>
-          <li>Ingredient 1</li>
-          <li>Ingredient 2</li>
-          <li>Ingredient 3</li>
-          <!-- Add more ingredients as needed -->
-        </ul>
-      </section>
+      <div class="grid-container mar-spacing">
+        <div class="grid">
+          <section>
+            <h2>Ingredients</h2>
+            <div class="horizontal-spacing"></div>
+            <ul>
+              <li>230g Spaghetti</li>
+              <li>120g diced bacon</li>
+              <li>50g grated Parmigiana Reggiano (parmesan cheese)</li>
+              <li>3 egg yolks</li>
+              <li>Salt and pepper</li>
+            </ul>
+          </section>
 
-      <section>
-        <h2>Steps</h2>
-        <ol>
-          <li>Step 1: Description of step 1.</li>
-          <li>Step 2: Description of step 2.</li>
-          <li>Step 3: Description of step 3.</li>
-          <!-- Add more steps as needed -->
-        </ol>
-      </section>
+          <div class="vertical-spacing"></div>
+
+          <section>
+            <h2>Steps</h2>
+            <div class="horizontal-spacing"></div>
+            <ol>
+              <li>
+                Put some salted water on to boil. Then start by cutting the
+                bacon into small pieces. Fry this in a pan. I use my wok for
+                this.
+              </li>
+              <li>
+                When the bacon has obtained the required crispiness take it off
+                the heat.
+              </li>
+              <li>
+                Cook the spaghetti according to instructions on the packet. If
+                it does not fit in the pan, then break it in two.
+              </li>
+              <li>
+                In the meantime, mix the egg yolks with the grated cheese until
+                you have a thick mixture. Keep some cheese for garnishing later.
+                Add black pepper to suit.
+              </li>
+              <li>
+                When the spaghetti is cooked, drain it and put it into the wok
+                with the bacon. Turning back on to a low heat.
+              </li>
+              <li>
+                Make sure you keep a cup of the pasta water when you drain the
+                spaghetti. Mix the bacon well with the spaghetti and add a few
+                tablespoons of pasta water. Then remove the spaghetti completely
+                from the heat.
+              </li>
+              <li>
+                Then add the egg/cheese mix to the pan, mixing well so that all
+                of the spaghetti is covered.
+              </li>
+              <li>
+                Add a few more spoons of the cooking water to loosen it up if
+                needed. Be careful not to let the eggs scramble, which they will
+                if there is too much heat in the pan.
+              </li>
+            </ol>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>
