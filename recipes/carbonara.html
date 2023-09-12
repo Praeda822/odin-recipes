@@ -11,9 +11,10 @@
     ></script>
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap");
 
-      *::before {
+      *::before,
+      *::after {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -22,50 +23,107 @@
       body {
         font-family: "Montserrat", sans-serif;
         font-weight: 500;
-        margin: 0 auto;
-        background-color: #b69f61;
+        background: linear-gradient(
+            180deg,
+            rgb(235, 235, 235),
+            rgb(138, 200, 50)
+          )
+          fixed;
         color: #2d2f31;
         height: 100vh;
+        width: 100%;
+        line-height: 1.5;
       }
 
-      img {
-        height: 100%;
-        width: 40%;
-        border-radius: 100%;
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 7rem;
       }
 
       li {
         margin-bottom: 1rem;
       }
+
+      span {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        padding: 2rem;
+        width: 100%;
+      }
+
+      .horizontal-spacer {
+        margin: 1rem auto;
+        border: 0.1rem solid #8ac832;
+        width: 95%;
+      }
+
+      .vertical-spacer {
+        width: 0.1rem;
+        background-color: #8ac832;
+        height: 80%;
+        align-self: center; /*Vertically centers my spacer */
+      }
+
+      .margin-t-spacer {
+        margin-top: 3.2rem;
+      }
       .container {
         /* height: 100vh; */
-        width: 43rem;
-        padding: 2rem 3.2rem;
-        margin: 0 auto;
+        max-width: 43rem;
+        padding: 3.2rem 3.2rem;
+        margin: 9rem auto 3rem auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
         background-color: #fefefe;
+        border: 0.5rem double #8ac832;
         border-radius: 5%;
       }
 
-      .horizontal-spacing {
-        margin: 1rem auto;
-        border: 0.1rem solid #b69f61;
-        width: 95%;
+      .img-container img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        border: 0.3rem solid #fff;
+        box-shadow: 0 0 0 4px #8ac832;
+        object-fit: cover;
+        transition: transform 0.3s;
       }
 
-      .vertical-spacing {
-        width: 0.1rem;
-        background-color: #b69f61;
-        height: 80%;
-        align-self: center; /*Vertically centers my spacer */
+      .img-container img:hover {
+        transform: scale(1.05);
       }
 
-      .mar-spacing {
-        margin-top: 3.2rem;
+      .img-container {
+        position: absolute;
+        top: 1rem;
+        left: 51%;
+        transform: translateX(-50%);
+      }
+
+      .infobox {
+        width: 50%;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 1.5rem auto;
+        padding: 0.5rem 1rem;
+        border: 0.15rem solid #8ac832;
+        border-radius: 10%;
+        background-color: #f8f8f8;
+        box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
       }
 
       .grid-container {
@@ -83,36 +141,87 @@
         column-gap: 3.2rem;
       }
 
-      .grid section:first-child ul {
+      /* .grid section:first-child ul {
         margin-top: 9rem;
+      } */
+
+      .footer-img-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 3.5rem;
+      }
+
+      .odin-logo {
+        width: 200px;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+
+      .footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+      }
+
+      .footer-links {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .footer-links a {
+        display: inline-block;
+        transition: transform 0.3s;
+        margin: 0 5px;
+        color: #d5d5d6;
+      }
+
+      .footer-links a:hover {
+        transform: translateY(-5px); /* "Jump" effect on hover */
       }
     </style>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Cheesy Bacon Carbonara</h1>
         <div class="img-container">
           <img src="/img/carbonara.jpg" alt="cheesy carbonara image" />
         </div>
       </header>
 
-      <section>
-        <h2>Description</h2>
-        <p>
+      <main>
+        <h1>Cheesy Bacon Carbonara</h1>
+        <div class="horizontal-spacer"></div>
+        <p class="margin-t-spacer">
           This creamy bacon carbonara recipe is so simple to make and so
-          rewarding. It is yet another absolute classic Italian recipe that
-          everyone should be able to make themselves at home.
+          rewarding that it can be prepared in less than 15 minutes!
         </p>
 
-        <i class="fa-regular fa-clock fa-2xl" style="color: #b69f61"></i>
-      </section>
+        <p class="text-desc">
+          It is yet another absolute classic Italian recipe that everyone should
+          be able to make themselves at home.
+        </p>
+      </main>
 
-      <div class="grid-container mar-spacing">
+      <div class="infobox">
+        <i
+          class="fa-regular fa-clock fa-beat fa-2xl"
+          style="color: #8ac832"
+        ></i>
+        <span>12 Minutes</span>
+        <div class="vertical-spacer"></div>
+        <span>Serves 2</span>
+      </div>
+
+      <div class="grid-container margin-t-spacer">
         <div class="grid">
           <section>
             <h2>Ingredients</h2>
-            <div class="horizontal-spacing"></div>
+            <div class="horizontal-spacer"></div>
             <ul>
               <li>230g Spaghetti</li>
               <li>120g diced bacon</li>
@@ -122,11 +231,11 @@
             </ul>
           </section>
 
-          <div class="vertical-spacing"></div>
+          <div class="vertical-spacer"></div>
 
           <section>
             <h2>Steps</h2>
-            <div class="horizontal-spacing"></div>
+            <div class="horizontal-spacer"></div>
             <ol>
               <li>
                 Put some salted water on to boil. Then start by cutting the
@@ -171,4 +280,32 @@
       </div>
     </div>
   </body>
+
+  <footer>
+    <div class="footer-img-container">
+      <a href="https://www.theodinproject.com/" target="_blank">
+        <img
+          src="/img/odinlogo.png"
+          alt="The Odin Project Logo"
+          class="odin-logo"
+        />
+      </a>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a href="https://github.com/TheOdinProject" target="_blank">
+            <i class="fa-brands fa-github fa-xl" style="color: #d5d5d6"></i
+          ></a>
+          <a href="https://discord.com/invite/fbFCkYabZB" target="_blank">
+            <i class="fa-brands fa-discord fa-xl" style="color: #d5d5d6"></i
+          ></a>
+          <a href="https://www.facebook.com/theodinproject/" target="_blank">
+            <i class="fa-brands fa-facebook fa-xl" style="color: #d5d5d6"></i
+          ></a>
+          <a href="https://twitter.com/TheOdinProject" target="_blank">
+            <i class="fa-brands fa-twitter fa-xl" style="color: #d5d5d6"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </html>
