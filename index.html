@@ -3,13 +3,243 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odin Recipes</title>
+    <title>Pat's Recipe Book</title>
+    <script
+      src="https://kit.fontawesome.com/29b198df20.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap");
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        background: linear-gradient(
+            180deg,
+            rgb(235, 235, 235),
+            rgb(138, 200, 50)
+          )
+          fixed;
+        color: #2d2f31;
+        height: 100vh;
+        width: 100%;
+        line-height: 1.5;
+      }
+
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        background-color: #fff;
+        padding: 2rem;
+        width: 100%;
+      }
+
+      .menu-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: #2d2f31;
+      }
+
+      .menu-heading {
+        margin: 0 auto;
+        color: #fff;
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+      }
+
+      .menu-toggle {
+        background-color: #d5d5d6;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        color: #2d2f31;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .menu-toggle:hover {
+        background-color: #aaaaab;
+        color: #fff;
+      }
+
+      .menu-toggle:active {
+        background-color: #888888;
+        color: #fff;
+      }
+
+      .menu-dropdown {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #fff;
+        top: 3.5rem;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        transform-origin: top center;
+        opacity: 0;
+        transform: scaleY(0);
+      }
+
+      .menu-dropdown a {
+        color: #2d2f31;
+        padding: 14px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+      }
+
+      .menu-dropdown a:hover {
+        background-color: #d5d5d6;
+        color: #2d2f31;
+      }
+
+      .menu-button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .menu-toggle:focus ~ .menu-dropdown,
+      .menu-dropdown:hover {
+        display: flex;
+        opacity: 1;
+        transform: scaleY(1);
+      }
+
+      .footer-img-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 3.5rem;
+      }
+
+      .odin-logo {
+        width: 200px;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+
+      .footer-socials-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+      }
+
+      .footer-socials-links {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .footer-socials-links a {
+        display: inline-block;
+        transition: transform 0.3s;
+        margin: 0 5px;
+        color: #d5d5d6;
+      }
+
+      .footer-socials-links a:hover {
+        transform: translateY(-5px); /* "Jump" effect on hover */
+      }
+
+      .footer-sitemap-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .footer-sitemap-container a:link,
+      .footer-sitemap-container a:visited {
+        font-size: 85%;
+        text-decoration: none;
+        color: #d5d5d6;
+        cursor: pointer;
+      }
+
+      .footer-sitemap-container a:hover,
+      .footer-sitemap-container a:active {
+        transform: translateY(-2.5px);
+        color: #aaaaab;
+      }
+    </style>
   </head>
   <body>
-    <h1>Odin Recipes</h1>
+    <nav>
+      <div class="menu-container">
+        <button class="menu-toggle">Menu</button>
+        <h1 class="menu-heading">Pat's Aussie Odin Recipes</h1>
 
-    <ul>
-      <li><a href="recipes/carbonara.html">Cheesy Carbonara</a></li>
-    </ul>
+        <div class="menu-dropdown">
+          <a href="/index.html" class="menu-button">Home</a>
+          <a href="/recipes/lasagna.html" class="menu-button"
+            >Homemade Lasagna</a
+          >
+          <a href="/recipes/carbonara.html" class="menu-button"
+            >Cheesy Bacon Carbonara</a
+          >
+          <a href="/recipes/snags.html" class="menu-button">Aussie BBQ Snags</a>
+        </div>
+      </div>
+    </nav>
+
+    <hero class="hero-container">
+      <div class="hero-grid"></div>
+    </hero>
+
+    <footer>
+      <div class="footer-img-container">
+        <a href="https://www.theodinproject.com/" target="_blank">
+          <img
+            src="/img/odinlogo.png"
+            alt="The Odin Project Logo"
+            class="odin-logo"
+          />
+        </a>
+        <div class="footer-socials-container">
+          <div class="footer-socials-links">
+            <a href="https://github.com/TheOdinProject" target="_blank">
+              <i class="fa-brands fa-github fa-xl" style="color: #d5d5d6"></i
+            ></a>
+            <a href="https://discord.com/invite/fbFCkYabZB" target="_blank">
+              <i class="fa-brands fa-discord fa-xl" style="color: #d5d5d6"></i
+            ></a>
+            <a href="https://www.facebook.com/theodinproject/" target="_blank">
+              <i class="fa-brands fa-facebook fa-xl" style="color: #d5d5d6"></i
+            ></a>
+            <a href="https://twitter.com/TheOdinProject" target="_blank">
+              <i class="fa-brands fa-twitter fa-xl" style="color: #d5d5d6"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-sitemap-container">
+        <h4>Sitemap</h4>
+        <a href="/index.html">Home</a>
+        <a href="/recipes/lasagna.html">Homemade Lasagna</a>
+        <a href="/recipes/carbonara.html">Cheesy Bacon Carbonara</a>
+        <a href="/recipes/snags.html">Aussie BBQ Snags</a>
+        <a href="#pagetop">Back to Top</a>
+      </div>
+    </footer>
   </body>
 </html>
