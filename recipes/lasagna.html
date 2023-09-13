@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lasagne</title>
+    <title>Lasagna</title>
 
     <script
       src="https://kit.fontawesome.com/29b198df20.js"
@@ -13,6 +13,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap");
 
+      *::before,
       *::after {
         margin: 0;
         padding: 0;
@@ -34,6 +35,12 @@
         line-height: 1.5;
       }
 
+      main p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 1rem;
+      }
+
       h1 {
         font-size: 2.5rem;
         font-weight: 700;
@@ -51,12 +58,16 @@
 
       footer {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 1rem;
         background-color: #fff;
         padding: 2rem;
         width: 100%;
+      }
+
+      .p-l2 {
+        padding-left: 2rem;
       }
 
       .horizontal-spacer {
@@ -158,46 +169,72 @@
         margin-bottom: 1rem;
       }
 
-      .footer-container {
+      .footer-socials-container {
         display: flex;
         align-items: center;
         justify-content: space-around;
         width: 100%;
       }
 
-      .footer-links {
+      .footer-socials-links {
         text-decoration: none;
         display: flex;
         justify-content: center;
         gap: 1rem;
       }
 
-      .footer-links a {
+      .footer-socials-links a {
         display: inline-block;
         transition: transform 0.3s;
         margin: 0 5px;
         color: #d5d5d6;
       }
 
-      .footer-links a:hover {
+      .footer-socials-links a:hover {
         transform: translateY(-5px); /* "Jump" effect on hover */
+      }
+
+      .footer-sitemap-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .footer-sitemap-container a:link,
+      .footer-sitemap-container a:visited {
+        font-size: 85%;
+        text-decoration: none;
+        color: #d5d5d6;
+        cursor: pointer;
+      }
+
+      .footer-sitemap-container a:hover,
+      .footer-sitemap-container a:active {
+        transform: translateY(-2.5px);
+        color: #aaaaab;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <header>
-        <div class="img-container">
-          <img src="/img/" alt="" />
+        <div class="img-container" id="pagetop">
+          <img src="/img/lasagna.jpg" alt="" />
         </div>
       </header>
 
       <main>
-        <h1>Lasagne</h1>
+        <h1>Homemade Pasta Lasagna</h1>
         <div class="horizontal-spacer"></div>
-        <p class="margin-t-spacer">[Yum yum, let me sell you some food]</p>
+        <p class="margin-t-spacer">
+          Looking for a delicious and healthy Lasagna recipe you can make at
+          home?
+        </p>
 
-        <p class="text-desc">[Yum yum, let me sell you some food]</p>
+        <p class="text-desc">
+          This spin on the classic Italian favorite gets the job done when it
+          comes to satiating your appetite
+        </p>
       </main>
 
       <div class="infobox">
@@ -205,22 +242,36 @@
           class="fa-regular fa-clock fa-beat fa-2xl"
           style="color: #8ac832"
         ></i>
-        <span>X Minutes</span>
+        <span>2 hours</span>
         <div class="vertical-spacer"></div>
-        <span>Serves X</span>
+        <span>Serves 6</span>
       </div>
 
       <div class="grid-container margin-t-spacer">
         <div class="grid">
           <section>
-            <h2>Ingredients</h2>
-            <div class="horizontal-spacer"></div>
+            <h2 class="p-l2">Ingredients</h2>
+            <div class="horizontal-spacer p-l2"></div>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>4 Tbsp extra-virgin olive oil</li>
+              <li>2 garlic cloves, peeled and crushed</li>
+              <li>4 zucchini, cut into 1/4" rounds</li>
+              <li>1 lb ground chicken</li>
+              <li>1 large yellow onion, diced</li>
+
+              <li>1/2 cup diced pancetta</li>
+              <li>1/2 cup dry white wine</li>
+              <li>2 cans (28oz/ea) San Marzano tomatoes, crushed by hand...</li>
+              <li>
+                ..mixed with 1 cup water and sloshed around in <i>one</i> can
+              </li>
+              <li>3 dried bay leaves</li>
+              <li>4 Tbsp butter, plus extra for greasing</li>
+              <li>1/2 cup flour</li>
+              <li>2 cups milk</li>
+              <li>1 1/2 cups freshly grated Parmesan</li>
+              <li>2 cups shredded low-moisture mozzarella</li>
+              <li>1 box (12 oz) lasagna noodles</li>
             </ul>
           </section>
 
@@ -230,14 +281,61 @@
             <h2>Steps</h2>
             <div class="horizontal-spacer"></div>
             <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <h3>Build Your Bolognese</h3>
+              <li>
+                Heat 3Tbsp of olive oil on medium-high in a large pot. Brown
+                your garlic and your zucchini for about 2 minutes, then move it
+                to a plate. Now brown your chicken for about 5-7 minutes, adding
+                it to the plate with your garlic and zucchini.
+              </li>
+              <li>
+                Next, saute your onions, pancetta, and add a pinch of of salt
+                for every 1Tbsp of olive oil until the onion softens and the fat
+                gets in (takes roughly 5 or so minutes). Now add the tomatoes,
+                water, bay leaves, salt and papper, simmering until thickened.
+                This should take about 20-30 minutes. Finally, add your plate
+                ingredients and simmer for 15 minutes.
+              </li>
+              <h3>Concoct the Secret Sauce</h3>
+              <li>
+                Melt your butter in a medium-sized pan over medium heat,
+                gradually adding the flour whilst whisking continuously over the
+                heat until the mixtures appears glossy, which should take about
+                5 minutes.
+              </li>
+              <li>
+                Now add your milk, whisking until the sauce mixture has
+                thickened but is still pourable (takes about 5 minutes). Then
+                season the sauce with salt, pouring it into a bowl and wrapping
+                it with plastic wrap, ensuyring the plastic wrap touches the
+                surface of the sauce (so there's no skin).
+              </li>
+              <h3>Prepare your Pasta</h3>
+              <li>
+                Preheat your oven to 180°C (375°F for the Americans) and butter
+                up an 8"x 8" baking dish. Then mix the cheeses in one bowl and
+                sauces into another. Add 1/2 cup of sauce to the dish, then a
+                pasta layer, then 3Tbsp cheese, then some more pasta, layering
+                the lasagna like a cake as you go.
+              </li>
+              <li>
+                Layer sauce/cheese/pasta <i>four times</i> and don't be stingy
+                with your sauce! Fold any leftover pasta over the lasagna and
+                add any remaining sauce/cheese.
+              </li>
+              <h3>The MasterChef Special</h3>
+              <li>
+                Put aluminum foil over the dish ensuring you poke some holes in
+                the foil so it can vent steam. Now set your lasagna on a baking
+                sheet and bake until the top begins to bubble, which should take
+                about 30-45 minutes.
+              </li>
+              <li>
+                Finally, remove the foil cover and continue baking until the top
+                of your lasagna is brown and crispy which will take another 30
+                minutes or so. Let your dish stand for another half hour before
+                getting stuck into it!
+              </li>
             </ol>
           </section>
         </div>
@@ -254,8 +352,8 @@
           class="odin-logo"
         />
       </a>
-      <div class="footer-container">
-        <div class="footer-links">
+      <div class="footer-socials-container">
+        <div class="footer-socials-links">
           <a href="https://github.com/TheOdinProject" target="_blank">
             <i class="fa-brands fa-github fa-xl" style="color: #d5d5d6"></i
           ></a>
@@ -270,6 +368,13 @@
           ></a>
         </div>
       </div>
+    </div>
+    <div class="footer-sitemap-container">
+      <h4>Sitemap</h4>
+      <a href="/index.html">Home</a>
+      <a href="/recipes/carbonara.html">Cheesy Bacon Carbonara</a>
+      <a href="/recipes/snags.html">Aussie BBQ Snags</a>
+      <a href="#pagetop">Back to Top</a>
     </div>
   </footer>
 </html>

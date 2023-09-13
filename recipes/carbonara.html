@@ -35,6 +35,12 @@
         line-height: 1.5;
       }
 
+      main p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 1rem;
+      }
+
       h1 {
         font-size: 2.5rem;
         font-weight: 700;
@@ -52,12 +58,16 @@
 
       footer {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 1rem;
         background-color: #fff;
         padding: 2rem;
         width: 100%;
+      }
+
+      .p-l2 {
+        padding-left: 2rem;
       }
 
       .horizontal-spacer {
@@ -183,12 +193,32 @@
       .footer-links a:hover {
         transform: translateY(-5px); /* "Jump" effect on hover */
       }
+
+      .footer-sitemap-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .footer-sitemap-container a:link,
+      .footer-sitemap-container a:visited {
+        font-size: 85%;
+        text-decoration: none;
+        color: #d5d5d6;
+        cursor: pointer;
+      }
+
+      .footer-sitemap-container a:hover,
+      .footer-sitemap-container a:active {
+        transform: translateY(-2.5px);
+        color: #aaaaab;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <header>
-        <div class="img-container">
+        <div class="img-container" id="pagetop">
           <img src="/img/carbonara.jpg" alt="cheesy carbonara image" />
         </div>
       </header>
@@ -220,8 +250,8 @@
       <div class="grid-container margin-t-spacer">
         <div class="grid">
           <section>
-            <h2>Ingredients</h2>
-            <div class="horizontal-spacer"></div>
+            <h2 class="p-l2">Ingredients</h2>
+            <div class="horizontal-spacer p-l2"></div>
             <ul>
               <li>230g Spaghetti</li>
               <li>120g diced bacon</li>
@@ -306,6 +336,13 @@
           ></a>
         </div>
       </div>
+    </div>
+    <div class="footer-sitemap-container">
+      <h4>Sitemap</h4>
+      <a href="/index.html">Home</a>
+      <a href="/recipes/lasagna.html">Homemade Pasta Lasagna</a>
+      <a href="/recipes/snags.html">Aussie BBQ Snags</a>
+      <a href="#pagetop">Back to Top</a>
     </div>
   </footer>
 </html>
