@@ -59,6 +59,7 @@
         color: #2d2f31;
         font-size: 2rem;
         font-weight: 700;
+        margin-bottom: 1rem;
       }
 
       .menu-toggle {
@@ -130,7 +131,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        height: 100%;
       }
 
       .hero-grid {
@@ -141,7 +142,7 @@
         border: 0.3rem solid #8ac832;
         box-shadow: 0 0 0 4px #fff;
         border-radius: 5%;
-        margin: 0 3rem;
+        margin: 1.5rem 3rem;
       }
 
       .hero-text {
@@ -150,14 +151,14 @@
         align-items: center;
         justify-content: center;
         padding: 3.2rem 3.2rem;
-        width: 60%;
+        width: 75%;
         margin: 0 auto;
       }
 
       .hero-text h2 {
         font-size: 2.7rem;
         font-weight: 700;
-        margin-bottom: 1rem;
+        margin-bottom: 2.5rem;
       }
 
       .hero-text p {
@@ -166,12 +167,65 @@
         margin-bottom: 1rem;
       }
 
+      .hero-recipe-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .img-container {
+        width: 85%;
+        display: flex;
+        margin: 1rem 1.5rem 0.5rem;
+      }
+
+      .img-container img {
+        height: 190px;
+        width: 190px;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        border: 0.3rem solid #fff;
+        box-shadow: 0 0 0 4px #8ac832;
+        object-fit: cover;
+        transition: transform 0.3s;
+        z-index: 2;
+        position: relative;
+      }
+
+      .img-container img:hover {
+        transform: scale(1.05);
+      }
+
+      .img-container h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .img-container p {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-left: 1rem;
+      }
+
+      .recipe-text {
+        height: 82.5%;
+        width: 82.5%;
+        margin-left: -50px;
+        border-radius: 5%;
+        border: 0.3rem solid #8ac832;
+        box-shadow: 0 0 0 4px #fff;
+        margin: 0.5rem 0 0 -3.3rem;
+        padding: 0 1rem 1.5rem 3.3rem;
+      }
+
       .footer-img-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-right: 3.5rem;
+        margin-bottom: 1.5rem;
       }
 
       .odin-logo {
@@ -224,6 +278,122 @@
         transform: translateY(-2.5px);
         color: #aaaaab;
       }
+
+      @media only screen and (min-width: 51.875em) and (max-width: 93.75em) {
+        .menu-heading {
+          font-size: 1.5rem;
+        }
+
+        .menu-container,
+        footer {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-grid {
+          grid-template-columns: 1fr;
+          margin: 0 1rem;
+        }
+        .hero-container,
+        .hero-text,
+        .hero-recipe-container {
+          width: 100%;
+          padding: 2rem;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
+        .img-container {
+          flex-direction: column;
+          align-items: center;
+          margin: 2rem 0;
+        }
+
+        .img-container img {
+          width: 150px;
+          height: 150px;
+        }
+
+        .recipe-text {
+          margin: 0;
+          padding: 1rem;
+          margin-top: -2.5rem;
+        }
+
+        .footer-img-container,
+        .footer-sitemap-container {
+          align-items: center;
+          text-align: center;
+        }
+
+        .footer-sitemap-container a {
+          display: block;
+          margin: 0.5rem 0;
+        }
+
+        .footer-socials-links {
+          gap: 0.5rem;
+        }
+      }
+
+      @media only screen and (max-width: 52em) {
+        .menu-heading {
+          font-size: 1.5rem;
+        }
+
+        .menu-container,
+        footer {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-grid {
+          grid-template-columns: 1fr;
+          margin: 0 1rem;
+        }
+        .hero-container,
+        .hero-text,
+        .hero-recipe-container {
+          width: 100%;
+          padding: 2rem;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
+        .img-container {
+          flex-direction: column;
+          align-items: center;
+          margin: 2rem 0;
+        }
+
+        .img-container img {
+          width: 150px;
+          height: 150px;
+        }
+
+        .recipe-text {
+          margin: 0;
+          padding: 1rem;
+          margin-top: -2.5rem;
+        }
+
+        .footer-img-container,
+        .footer-sitemap-container {
+          align-items: center;
+          text-align: center;
+        }
+
+        .footer-sitemap-container a {
+          display: block;
+          margin: 0.5rem 0;
+        }
+
+        .footer-socials-links {
+          gap: 0.5rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -258,7 +428,44 @@
             tasked with making a simple recipe book containing our 3 favourite
             recipes.
           </p>
-          <p>So here it is! I hope you enjoy these recipes as much as I do!</p>
+          <p>
+            So here they are! I hope you enjoy these recipes as much as I do!
+          </p>
+        </div>
+        <div class="hero-recipe-container">
+          <div class="img-container">
+            <a href="/recipes/lasagna.html" target="_blank">
+              <img src="/img/lasagna.jpg" alt="lasagna image" />
+            </a>
+            <div class="recipe-text">
+              <h2>Healthy Homemade Lasagna</h2>
+              <p>
+                Looking for a delicious and healthy Lasagna recipe you can make
+                at home?
+              </p>
+            </div>
+          </div>
+          <div class="img-container">
+            <a href="/recipes/snags.html" target="_blank">
+              <img src="/img/bbqsnags.webp" alt="aussie barbecue sausages" />
+            </a>
+            <div class="recipe-text">
+              <h2>Aussie BBQ Snags</h2>
+              <p>A classic Aussie BBQ favourite: the humble sanga sandwich.</p>
+            </div>
+          </div>
+          <div class="img-container">
+            <a href="/recipes/carbonara.html" target="_blank">
+              <img src="/img/carbonara.jpg" alt="cheesy carbonara image" />
+            </a>
+            <div class="recipe-text">
+              <h2>Cheesy Bacon Carbonara</h2>
+              <p>
+                Deliciously creamy and cheesy homemade carbonara with crispy
+                bacon
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </hero>
